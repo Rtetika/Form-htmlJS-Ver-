@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Place</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
+
 <body>
     <div id="form-container" class="hidden">
         <h2> Add a new Tourist place</h2>
         <form action="" id="tourist-form">
             <div>
                 <label for="name">Name: </label>
-                <input type="text" name="" id="name" required class="u-full-width">
+                <input type="text" name="" id="name" required>
             </div>
             <div>
                 <label for="address">Address: </label>
-                <input type="text" name="" id="address" required class="u-full-width">
+                <input type="text" name="" id="address" required>
             </div>
             <div>
                 <label for="rating">Rating: </label>
-                <input type="number" name="" id="rating" min="1" max="5" value="1"  required class="u-full-width">
+                <input type="number" name="" id="rating" min="1" max="5" value="1"  required>
             </div>
             <div>
                 <label for="type">Type: </label>
-                <input type="text" name="" id="type" class="u-full-width">
+                <input type="text" name="" id="type">
             </div>
             <div>
                 <label for="picture">Picture: </label>
-                <input type="file" name="" id="picture" accept="image/*" class="u-full-width">
+                <input type="file" name="" id="picture" accept="image/*">
             </div>
 
             <div class="btn-container">
@@ -36,13 +38,11 @@
             <button type ="reset" class="res" >Reset</button>
             <a href="tourist.html"><h3>back to tourist list<h3> </a>
 
-            </div>
-
-            
-            
+            </div>      
             
         </form>
     </div>
+    
     <script src="app.js"></script>
  
 
