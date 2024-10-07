@@ -12,6 +12,8 @@ function generateList() {
              <td>${place.name}</td>
              <td>${place.address}</td>
              <td>${place.rating}</td>
+             <td>${place.type}</td>
+             <td>${place.date}</td>
              <td><img src= "${place.pictureURL}" alt="Image" style="width: 100px;"></td>
              <td>
              <button class="edit-btn" onclick="editTourist(${index})">Update</button>
@@ -41,6 +43,7 @@ async function submitForm() {
     const address = document.getElementById("address").value;
     const rating = document.getElementById("rating").value;
     const type = document.getElementById("type").value;
+    const date =document.getElementById("date").value;
     const picture = document.getElementById("picture").files[0];
 
     let pictureURL = '';
@@ -53,6 +56,7 @@ async function submitForm() {
         address,
         rating,
         type,
+        date,
         pictureURL
     };
 
@@ -84,8 +88,10 @@ if (document.getElementById("tourist-form")) {
         document.getElementById("name").value = place.name;
         document.getElementById("address").value = place.address;
         document.getElementById("rating").value = place.rating;
-        document.getElementById("type").value = place.type;       
+        document.getElementById("type").value = place.type; 
+        document.getElementById("date").value = place.date;      
     }
 }
+//searchbar function
 
 window.onload = generateList;

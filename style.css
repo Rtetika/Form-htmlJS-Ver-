@@ -115,6 +115,10 @@ form input, form select {
     /* text-align: left; */
     align-content: left;
 }
+form select{
+    width: 620px;
+    
+}
 
 form label {
     
