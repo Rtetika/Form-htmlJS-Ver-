@@ -72,15 +72,45 @@ button:hover {
     box-shadow: 2px 2px  rgb(31, 194, 75) inset;
 }
 
+.sub:hover{
+    background-color: rgb(22, 156, 58) !important;
+}
+
 .res{
     background-color: rgb(253, 139, 32);
     box-shadow: 2px 2px   rgb(190, 97, 9) inset;
     
 }
+
+.res:hover{
+    background-color:  rgb(255, 123, 0);
+}
+
 .btn-container{
     text-align: right;
     
 }
+
+.dlt-btn{
+    background-color: rgb(224, 54, 51);
+    box-shadow: 2px 2px   rgb(162, 10, 10) inset;
+
+}
+
+.dlt-btn:hover{
+    background-color:  rgb(162, 10, 10);
+}
+
+.edit-btn{
+    background-color: rgb(40, 184, 78);
+    box-shadow: 2px 2px  rgb(22, 156, 58) inset;
+
+}
+
+.edit-btn:hover{
+    background-color: rgb(22, 156, 58) !important;
+}
+
 h3{
     color: black;
     font-size: 15px;
