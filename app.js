@@ -28,6 +28,39 @@ function generateList() {
     }
 }
 
+
+function searchTourist() {
+    const searchInput = document.getElementById("search-bar");
+    const searchValue = searchInput.value.toLowerCase();
+    const table = document.getElementById("tourist-list");
+    const tr = table.getElementsByTagName("tr");
+
+    //loop to search by column by column , td[0]= name, td[1]=address, td[2]=rating, td[3]=type 
+    for(let i = 0; i < tr.length; i++){
+        const tdName = tr[i].getElementsByTagName("td")[0];
+        const tdAddress = tr[i].getElementsByTagName("td")[1];
+        const tdRating = tr[i].getElementsByTagName("td")[2];
+        const tdType = tr[i].getElementsByTagName("td")[3];
+
+        if(tdName && tdAddress && tdRating && tdType ) {
+            const txtName = tdName.textContent || tdName.innerText;
+            const txtAddress = tdAddress.textContent || tdAddress.innerText;
+            const txtRating = tdRating.textContent || tdRating.innerText;
+            const txtType = tdType.textContent || tdType.innerText;
+
+            
+            if (txtName.toLowerCase().indexOf(searchValue) > -1 || txtAddress.toLowerCase().indexOf(searchValue) > -1 || txtRating.toLowerCase().indexOf(searchValue) > -1 || txtType.toLowerCase().indexOf(searchValue) > -1){
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+
+        }
+
+    }
+
+  }
+
 function toBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -92,6 +125,6 @@ if (document.getElementById("tourist-form")) {
         document.getElementById("date").value = place.date;      
     }
 }
-//searchbar function
 
-window.onload = generateList;
+
+window.onload =  generateList();
